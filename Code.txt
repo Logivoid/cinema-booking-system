@@ -184,7 +184,7 @@ void cancelTicket(Movie movies[], int& n, Ticket tickets[], int& t) {
 	}
 	for (int i = 0; i < t; i++) {
 		if (tickets[i].seatNumber == seatNumber && strcmp(tickets[i].movieName, movies[movieNumber - 1].name) == 0) {
-			for (int j = i; j < t; j++) {
+			for (int j = i; j < t - 1; j++) {
 				tickets[j] = tickets[j + 1];
 			}
 			t--;
@@ -234,7 +234,7 @@ void addMovie(Movie movies[], int& n) {
 void cancelMovieTickets(Ticket tickets[], int& n, char movieName[]) {
 	for (int i = 0; i < n; i++) {
 		if (strcmp(tickets[i].movieName, movieName) == 0) {
-			for (int j = i; j < n; j++) {
+			for (int j = i; j < n - 1; j++) {
 				tickets[j] = tickets[j + 1];
 			}
 			n--;
@@ -256,7 +256,7 @@ void removeMovie(Ticket tickets[], int& t, Movie movies[], int& n) {
 	}
 	displayMovie(movies[movieNumber - 1]);
 	cancelMovieTickets(tickets, t, movies[movieNumber - 1].name);
-	for (int i = movieNumber - 1; i < n; i++) {
+	for (int i = movieNumber - 1; i < n - 1; i++) {
 
 		movies[i] = movies[i + 1];
 	}
