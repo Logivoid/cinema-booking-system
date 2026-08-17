@@ -127,6 +127,10 @@ void bookTicket(Ticket tickets[], int& n, Movie movies[], int& m) {
 		printf("No movies available!\n");
 		return;
 	}
+	if (n >= 100) {
+		printf("Ticket capacity reached!\n");
+		return;
+	}
 	int movieNumber;
 	displayAllMovies(movies, m, tickets, n);
 	printf("Enter movie number: ");
@@ -202,6 +206,10 @@ void cancelTicket(Movie movies[], int& n, Ticket tickets[], int& t) {
 
 
 void addMovie(Movie movies[], int& n) {
+	if (n >= 100) {
+		printf("Movie capacity reached!\n");
+		return;
+	}
 	Movie movie;
 	printf("Enter movie name: ");
 	scanf_s("%s", &movie.name, 50);
