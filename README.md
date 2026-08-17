@@ -20,3 +20,6 @@ and displaying the current movies, tickets, seats, and snack inventory.
 
 The project uses the Visual Studio 2022 C++ toolset (`v143`). All application
 data is stored in memory and is reset when the program exits.
+
+Movie names and genres are entered as single words because the current console
+input format uses whitespace-delimited values.
