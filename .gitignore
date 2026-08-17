@@ -1,16 +1,6 @@
-# Visual Studio user settings and cache
 .vs/
-*.user
-
-# Build output
 Debug/
 Release/
 x64/
-x86/
-*.obj
-*.exe
-*.pdb
-*.ilk
-*.idb
-*.tlog
-*.log
+*.user
+*.suo
