@@ -23,3 +23,10 @@ data is stored in memory and is reset when the program exits.
 
 Movie names and genres are entered as single words because the current console
 input format uses whitespace-delimited values.
+
+## Typical workflow
+
+1. Add a movie with its duration, rating, and ticket price.
+2. Book a seat for the movie and note the seat number.
+3. Optionally buy snacks for the booked ticket.
+4. Use the display options to review movies, snacks, or tickets.
