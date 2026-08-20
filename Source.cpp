@@ -87,6 +87,10 @@ void displayAvailableSeats(Ticket tickets[], int n, char movieName[]) {
 
 
 void displayAllMovies(Movie movies[], int n, Ticket tickets[], int k, bool show = false) {
+	if (n == 0) {
+		printf("No movies available!\n");
+		return;
+	}
 	printf("Movies:\n");
 	for (int i = 0; i < n; i++) {
 		printf("%d)\n", i + 1);
