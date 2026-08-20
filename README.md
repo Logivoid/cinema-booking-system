@@ -18,6 +18,9 @@ and displaying the current movies, tickets, seats, and snack inventory.
 2. Select a Debug or Release configuration.
 3. Build and run `Project1`.
 
+The project is intended for Windows because it uses Visual Studio's `scanf_s`
+and `strcpy_s` input functions.
+
 The project uses the Visual Studio 2022 C++ toolset (`v143`). All application
 data is stored in memory and is reset when the program exits.
 
