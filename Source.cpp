@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
+const int MAX_ITEMS = 100;
+const int SEAT_COUNT = 100;
+
 
 struct Movie {
 	char name[50];
@@ -60,7 +63,7 @@ void displayTicket(Ticket ticket) {
 
 void displayAvailableSeats(Ticket tickets[], int n, char movieName[]) {
 	printf("Available seats:\n");
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < SEAT_COUNT; i++) {
 		bool isAvailable = true;
 		for (int j = 0; j < n; j++) {
 			if (tickets[j].seatNumber == i && strcmp(tickets[j].movieName, movieName) == 0) {
@@ -127,7 +130,7 @@ void bookTicket(Ticket tickets[], int& n, Movie movies[], int& m) {
 		printf("No movies available!\n");
 		return;
 	}
-	if (n >= 100) {
+	if (n >= MAX_ITEMS) {
 		printf("Ticket capacity reached!\n");
 		return;
 	}
@@ -144,7 +147,7 @@ void bookTicket(Ticket tickets[], int& n, Movie movies[], int& m) {
 	int seatNumber;
 	printf("Enter seat number: ");
 	scanf_s("%d", &seatNumber);
-	if (seatNumber < 0 || seatNumber >= 100) {
+	if (seatNumber < 0 || seatNumber >= SEAT_COUNT) {
 		printf("Invalid seat number!\n");
 		return;
 	}
@@ -182,7 +185,7 @@ void cancelTicket(Movie movies[], int& n, Ticket tickets[], int& t) {
 	bool found = false;
 	printf("Enter seat number: ");
 	scanf_s("%d", &seatNumber);
-	if (seatNumber < 0 || seatNumber >= 100) {
+	if (seatNumber < 0 || seatNumber >= SEAT_COUNT) {
 		printf("Invalid seat number!\n");
 		return;
 	}
@@ -206,7 +209,7 @@ void cancelTicket(Movie movies[], int& n, Ticket tickets[], int& t) {
 
 
 void addMovie(Movie movies[], int& n) {
-	if (n >= 100) {
+	if (n >= MAX_ITEMS) {
 		printf("Movie capacity reached!\n");
 		return;
 	}
@@ -304,7 +307,7 @@ void buySnack(Snack snacks[], int& n, Movie movies[], int& m, Ticket tickets[], 
 	displayMovie(movies[movieNumber - 1]);
 	printf("Enter seat number: ");
 	scanf_s("%d", &seatNumber);
-	if (seatNumber < 0 || seatNumber >= 100) {
+	if (seatNumber < 0 || seatNumber >= SEAT_COUNT) {
 		printf("Invalid seat number!\n");
 		return;
 	}
