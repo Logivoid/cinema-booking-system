@@ -27,6 +27,9 @@ data is stored in memory and is reset when the program exits.
 Movie names and genres are entered as single words because the current console
 input format uses whitespace-delimited values.
 
+Durations are entered in minutes, ratings must be between 0 and 5, and prices
+must be between 0 and 500,000.
+
 ## Typical workflow
 
 1. Add a movie with its duration, rating, and ticket price.
