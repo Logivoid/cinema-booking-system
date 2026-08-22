@@ -46,12 +46,12 @@ void displayMovie(Movie movie) {
 	printf("Name: %s\n", movie.name);
 	printf("Genre: %s\n", movie.genre);
 	printf("Duration: %d\n", movie.duration);
-	printf("Rating: %lf\n", movie.rating);
-	printf("Amount: %lf\n", movie.amount);
+	printf("Rating: %.1f\n", movie.rating);
+	printf("Amount: %.2f\n", movie.amount);
 }
 
 void displaySnack(Snack snack) {
-	printf("Name: %s, Price: %lf (%d Available)\n", snack.name, snack.price, snack.amount);
+	printf("Name: %s, Price: %.2f (%d Available)\n", snack.name, snack.price, snack.amount);
 }
 
 void displayTicket(Ticket ticket) {
