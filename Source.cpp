@@ -57,7 +57,7 @@ void displaySnack(Snack snack) {
 void displayTicket(Ticket ticket) {
 	printf("Movie name: %s\n", ticket.movieName);
 	printf("Seat number: %d\n", ticket.seatNumber);
-	printf("Amount: %lf\n", ticket.amount);
+	printf("Amount: %.2f\n", ticket.amount);
 }
 
 
