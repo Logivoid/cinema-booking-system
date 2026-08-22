@@ -36,3 +36,6 @@ must be between 0 and 500,000.
 2. Book a seat for the movie and note the seat number.
 3. Optionally buy snacks for the booked ticket.
 4. Use the display options to review movies, snacks, or tickets.
+
+Seat numbers run from 0 through 99. Snack quantities cannot exceed the
+remaining inventory.
