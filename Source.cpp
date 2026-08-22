@@ -46,18 +46,18 @@ void displayMovie(Movie movie) {
 	printf("Name: %s\n", movie.name);
 	printf("Genre: %s\n", movie.genre);
 	printf("Duration: %d\n", movie.duration);
-	printf("Rating: %lf\n", movie.rating);
-	printf("Amount: %lf\n", movie.amount);
+	printf("Rating: %.1f\n", movie.rating);
+	printf("Amount: %.2f\n", movie.amount);
 }
 
 void displaySnack(Snack snack) {
-	printf("Name: %s, Price: %lf (%d Available)\n", snack.name, snack.price, snack.amount);
+	printf("Name: %s, Price: %.2f (%d Available)\n", snack.name, snack.price, snack.amount);
 }
 
 void displayTicket(Ticket ticket) {
 	printf("Movie name: %s\n", ticket.movieName);
 	printf("Seat number: %d\n", ticket.seatNumber);
-	printf("Amount: %lf\n", ticket.amount);
+	printf("Amount: %.2f\n", ticket.amount);
 }
 
 
@@ -261,6 +261,10 @@ void cancelMovieTickets(Ticket tickets[], int& n, char movieName[]) {
 
 
 void removeMovie(Ticket tickets[], int& t, Movie movies[], int& n) {
+	if (n == 0) {
+		printf("No movies available!\n");
+		return;
+	}
 	displayAllMovies(movies, n, tickets, t);
 	int movieNumber;
 	printf("Enter movie number: ");
@@ -329,7 +333,7 @@ void buySnack(Snack snacks[], int& n, Movie movies[], int& m, Ticket tickets[], 
 			int amount;
 			printf("Enter amount: ");
 			scanf_s("%d", &amount);
-			if (amount < 0 || amount > snacks[snackNumber - 1].amount) {
+			if (amount <= 0 || amount > snacks[snackNumber - 1].amount) {
 				printf("Invalid amount!\n");
 				return;
 			}
@@ -345,11 +349,11 @@ void buySnack(Snack snacks[], int& n, Movie movies[], int& m, Ticket tickets[], 
 
 
 int main() {
-	Movie movies[100];
+	Movie movies[MAX_ITEMS];
 	int n = 0;
-	Snack snacks[100] = { {"Popcorn", 100, 5000}, {"Coca", 100, 15000}, {"Pepsi", 100, 12000}, {"Water", 100, 2500}, {"Hotdog", 100, 50000} };
+	Snack snacks[MAX_ITEMS] = { {"Popcorn", 100, 5000}, {"Coca", 100, 15000}, {"Pepsi", 100, 12000}, {"Water", 100, 2500}, {"Hotdog", 100, 50000} };
 	int m = 5;
-	Ticket tickets[100];
+	Ticket tickets[MAX_ITEMS];
 	int k = 0;
 
 	displayMenu();

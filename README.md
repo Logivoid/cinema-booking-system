@@ -24,8 +24,14 @@ and `strcpy_s` input functions.
 The project uses the Visual Studio 2022 C++ toolset (`v143`). All application
 data is stored in memory and is reset when the program exits.
 
+If Visual Studio reports a toolset error, install the Desktop development with
+C++ workload and select the v143 build tools in the Visual Studio Installer.
+
 Movie names and genres are entered as single words because the current console
 input format uses whitespace-delimited values.
+
+Durations are entered in minutes, ratings must be between 0 and 5, and prices
+must be between 0 and 500,000.
 
 ## Typical workflow
 
@@ -33,3 +39,6 @@ input format uses whitespace-delimited values.
 2. Book a seat for the movie and note the seat number.
 3. Optionally buy snacks for the booked ticket.
 4. Use the display options to review movies, snacks, or tickets.
+
+Seat numbers run from 0 through 99. Snack quantities cannot exceed the
+remaining inventory.
