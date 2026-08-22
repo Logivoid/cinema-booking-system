@@ -345,11 +345,11 @@ void buySnack(Snack snacks[], int& n, Movie movies[], int& m, Ticket tickets[], 
 
 
 int main() {
-	Movie movies[100];
+	Movie movies[MAX_ITEMS];
 	int n = 0;
-	Snack snacks[100] = { {"Popcorn", 100, 5000}, {"Coca", 100, 15000}, {"Pepsi", 100, 12000}, {"Water", 100, 2500}, {"Hotdog", 100, 50000} };
+	Snack snacks[MAX_ITEMS] = { {"Popcorn", 100, 5000}, {"Coca", 100, 15000}, {"Pepsi", 100, 12000}, {"Water", 100, 2500}, {"Hotdog", 100, 50000} };
 	int m = 5;
-	Ticket tickets[100];
+	Ticket tickets[MAX_ITEMS];
 	int k = 0;
 
 	displayMenu();
