@@ -261,6 +261,10 @@ void cancelMovieTickets(Ticket tickets[], int& n, char movieName[]) {
 
 
 void removeMovie(Ticket tickets[], int& t, Movie movies[], int& n) {
+	if (n == 0) {
+		printf("No movies available!\n");
+		return;
+	}
 	displayAllMovies(movies, n, tickets, t);
 	int movieNumber;
 	printf("Enter movie number: ");
