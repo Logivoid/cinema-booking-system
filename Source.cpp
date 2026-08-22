@@ -333,7 +333,7 @@ void buySnack(Snack snacks[], int& n, Movie movies[], int& m, Ticket tickets[], 
 			int amount;
 			printf("Enter amount: ");
 			scanf_s("%d", &amount);
-			if (amount < 0 || amount > snacks[snackNumber - 1].amount) {
+			if (amount <= 0 || amount > snacks[snackNumber - 1].amount) {
 				printf("Invalid amount!\n");
 				return;
 			}
