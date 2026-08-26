@@ -8,30 +8,8 @@ and displaying the current movies, tickets, seats, and snack inventory.
 
 - Manage a list of movies
 - Book one of 100 seats for a movie
-- Cancel existing tickets
 - Purchase snacks against a booked ticket
 - Track snack inventory and ticket totals during the session
-
-## Build and run
-
-1. Open `Project1.sln` in Visual Studio 2022.
-2. Select a Debug or Release configuration.
-3. Build and run `Project1`.
-
-The project is intended for Windows because it uses Visual Studio's `scanf_s`
-and `strcpy_s` input functions.
-
-The project uses the Visual Studio 2022 C++ toolset (`v143`). All application
-data is stored in memory and is reset when the program exits.
-
-If Visual Studio reports a toolset error, install the Desktop development with
-C++ workload and select the v143 build tools in the Visual Studio Installer.
-
-Movie names and genres are entered as single words because the current console
-input format uses whitespace-delimited values.
-
-Durations are entered in minutes, ratings must be between 0 and 5, and prices
-must be between 0 and 500,000.
 
 ## Typical workflow
 
